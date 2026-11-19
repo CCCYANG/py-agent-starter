@@ -1,0 +1,23 @@
+{
+  "name": "py-agent-starter",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=22.20.0 <23"
+  },
+  "scripts": {
+    "dev": "concurrently --kill-others --kill-timeout 5000 --names backend,frontend \"pnpm dev:backend\" \"pnpm dev:frontend\"",
+    "dev:backend": "uv run --no-sync --package py-agent-backend uvicorn py_agent_backend.main:app --reload --reload-dir packages/backend/src --host 127.0.0.1 --port 5100",
+    "dev:frontend": "pnpm --filter @py-agent/frontend dev",
+    "typecheck": "pnpm -r typecheck && tsc --noEmit",
+    "build": "pnpm typecheck && pnpm --filter @py-agent/frontend build",
+    "test": "pnpm build && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^22.0.0",
+    "concurrently": "^10.0.7",
+    "typescript": "~5.9.3"
+  }
+}

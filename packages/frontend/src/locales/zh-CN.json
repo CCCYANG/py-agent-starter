@@ -1,0 +1,21 @@
+{
+  "pageTitle": "学习工作台 · Python Agent Starter",
+  "workspace": "学习工作台",
+  "language": "语言",
+  "darkMode": "深色模式",
+  "eyebrow": "从基础到智能应用",
+  "title": "让每一次学习，\n都有看得见的产出。",
+  "intro": "从 Python 和第一个 API 开始，逐步探索数据、知识检索与 Agent。在这里，把后端能力变成可交互的体验。",
+  "roadmap": "学习路线",
+  "roadmapDescription": "按自己的节奏，一次完成一个可验证的小目标。",
+  "foundations": "Python 与服务基础",
+  "foundationsDetail": "OOP · 包管理 · 异步与并发 · FastAPI · SQL",
+  "retrieval": "知识与检索",
+  "retrievalDetail": "Embedding · 向量检索 · 知识库 · RAG",
+  "agents": "Agent 与工作流",
+  "agentsDetail": "Dify · LangChain · LangGraph · Deep Agents",
+  "ready": "基础环境已就绪",
+  "planned": "后续学习",
+  "footer": "从一个小问题出发，让理解在实践中生长。",
+  "storageError": "无法读取或保存显示偏好。本次切换仍然有效，但刷新后可能重置；请检查浏览器存储权限。"
+}

@@ -1,0 +1,39 @@
+schema: spec-driven
+
+context: |
+  Language: zh-CN
+  All artifacts must be written in zh-CN.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  项目是用于学习后端服务的 monorepo，GitHub 仓库为 CCCYANG/py-agent-starter。
+  默认分支为 main，origin 为 git@github.com:CCCYANG/py-agent-starter.git。
+  两个主要目录为 openspec/ 和 packages/。
+  openspec/ 管理规格与变更；packages/backend/ 是 Python 后端；
+  packages/frontend/ 使用 Vue 3、Vite、TypeScript、Tailwind CSS 4、vue-i18n 展示后端产出。
+  支持中英文与深浅色切换；偏好持久化到浏览器，存储失败必须显示可见提示。
+  packages/core-ui/ 当前仅 export * from 'reka-ui'，不得提前封装组件或修改上游 API。
+  后续有明确需求时采用 shadcn 的源码维护方式，主题和 i18n 属于 frontend。
+  JavaScript 使用 pnpm workspace 和 pnpm-lock.yaml，成员为 frontend 和 core-ui。
+  当前基线：Python 3.12、uv workspace、共享 uv.lock、src 包布局、
+  FastAPI 最小服务、GET /health 存活检查、pytest、Ruff、mypy 和 GitHub Actions CI。
+  根目录 pnpm dev 同时启动前后端，开发地址固定为后端 http://127.0.0.1:5100、
+  前端 http://127.0.0.1:5200；支持热更新，端口占用时直接失败，不自动换端口。
+  前端开发服务监听 0.0.0.0:5200，也支持通过本机局域网 IP 访问。
+  根目录是虚拟 uv workspace，不发布根包；Python 依赖属于各成员包。
+  学习顺序：Python/OOP/包管理 -> 异步与并发 -> FastAPI/SQL ->
+  知识库/RAG/Embedding 向量化 -> Dify/LangChain/LangGraph/Deep Agents。
+  上述学习路线不是当前已实现功能。AI 框架和数据存储按阶段按需引入。
+  前端通过 API 展示结果，不能持有模型密钥或数据库凭据。
+  后续独立模块可加入 packages/，不预建空业务模块，不引入未使用的基础设施。
+  GitHub 仓库与 CI 不等于后端运行环境，实际部署目标另行确定。
+
+rules:
+  proposal:
+    - 明确本次学习目标、可观察产出和不包含的范围。
+    - 区分已实现能力与后续学习规划，说明受影响的 packages。
+  design:
+    - 在引入依赖、存储或跨包调用前说明必要性和数据流。
+    - 涉及外部 I/O 时明确超时、失败传播和密钥管理；涉及写入时说明幂等性。
+  specs:
+    - 使用可验证的需求和场景；有输入、I/O 或状态变更时覆盖相应失败边界。
+  tasks:
+    - 包含受影响调用方、测试、类型检查、构建和文档的验证任务。

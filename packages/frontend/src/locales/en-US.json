@@ -1,0 +1,21 @@
+{
+  "pageTitle": "Learning workspace · Python Agent Starter",
+  "workspace": "Learning workspace",
+  "language": "Language",
+  "darkMode": "Dark mode",
+  "eyebrow": "From fundamentals to intelligent apps",
+  "title": "Make every lesson\nsomething you can see.",
+  "intro": "Start with Python and your first API. Explore data, knowledge retrieval, and agents, turning backend capabilities into interactive experiences.",
+  "roadmap": "Learning roadmap",
+  "roadmapDescription": "Go at your own pace. Build one small, verifiable outcome at a time.",
+  "foundations": "Python & backend fundamentals",
+  "foundationsDetail": "OOP · Packages · Async & concurrency · FastAPI · SQL",
+  "retrieval": "Knowledge & retrieval",
+  "retrievalDetail": "Embedding · Vector search · Knowledge bases · RAG",
+  "agents": "Agents & workflows",
+  "agentsDetail": "Dify · LangChain · LangGraph · Deep Agents",
+  "ready": "Foundation ready",
+  "planned": "Coming later",
+  "footer": "Start with a small question. Build understanding through practice.",
+  "storageError": "Display preferences could not be read or saved. Changes work for this visit but may reset after refresh. Check browser storage permissions."
+}
